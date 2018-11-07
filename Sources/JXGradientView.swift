@@ -28,7 +28,7 @@ open class JXGradientView: UIView {
     }
 
     open func initializeViews() {
-        gradientLayer.jx_direction = .topToBottom
+        gradientLayer.jx_direction = .leftToRight
     }
 
     public var gradientLayer: CAGradientLayer {

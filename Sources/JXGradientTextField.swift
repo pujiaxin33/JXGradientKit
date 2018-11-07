@@ -28,7 +28,7 @@ open class JXGradientTextField: UITextField {
     }
 
     open func initializeViews() {
-        gradientLayer.jx_direction = .leftTopToRightBottom
+        gradientLayer.jx_direction = .leftToRight
     }
 
     public var gradientLayer: CAGradientLayer {
