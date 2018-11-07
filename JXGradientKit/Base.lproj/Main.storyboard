@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gd3-z4-e0S">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="nDj-xK-aht">
+            <objects>
+                <tableViewController id="Gd3-z4-e0S" customClass="ViewController" customModule="JXGradientKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="K0Y-6J-7cI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="U9L-Bd-ip9">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="79" id="sxL-a9-Php">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sxL-a9-Php" id="XHp-oh-FJn">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="78.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JXGradientView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvz-v7-Wbg">
+                                                    <rect key="frame" x="12" y="33.5" width="77" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Phm-en-45Q" customClass="JXGradientView" customModule="JXGradientKit" customModuleProvider="target">
+                                                    <rect key="frame" x="264" y="17.5" width="91" height="44"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="91" id="Jhf-B4-aoi"/>
+                                                        <constraint firstAttribute="height" constant="44" id="zdl-ft-Tku"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="mvz-v7-Wbg" firstAttribute="leading" secondItem="XHp-oh-FJn" secondAttribute="leading" constant="12" id="6cM-Xz-Abg"/>
+                                                <constraint firstAttribute="trailing" secondItem="Phm-en-45Q" secondAttribute="trailing" constant="20" id="HtX-YN-7XZ"/>
+                                                <constraint firstItem="mvz-v7-Wbg" firstAttribute="centerY" secondItem="XHp-oh-FJn" secondAttribute="centerY" id="OLF-5e-Qeb"/>
+                                                <constraint firstItem="Phm-en-45Q" firstAttribute="centerY" secondItem="XHp-oh-FJn" secondAttribute="centerY" id="YU2-w8-a5C"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="79" id="rsH-oq-ADp">
+                                        <rect key="frame" x="0.0" y="79" width="375" height="79"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rsH-oq-ADp" id="n4w-EZ-QVX">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="78.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JXGradientLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJH-9G-Nas">
+                                                    <rect key="frame" x="12" y="33.5" width="80" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  渐变色背景Label  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSh-zx-nMD" customClass="JXGradientLabel" customModule="JXGradientKit" customModuleProvider="target">
+                                                    <rect key="frame" x="209" y="29" width="146" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="wJH-9G-Nas" firstAttribute="leading" secondItem="n4w-EZ-QVX" secondAttribute="leading" constant="12" id="MXL-vt-oAo"/>
+                                                <constraint firstItem="tSh-zx-nMD" firstAttribute="centerY" secondItem="n4w-EZ-QVX" secondAttribute="centerY" id="Riu-rc-Moc"/>
+                                                <constraint firstAttribute="trailing" secondItem="tSh-zx-nMD" secondAttribute="trailing" constant="20" id="g7x-Uf-EPy"/>
+                                                <constraint firstItem="wJH-9G-Nas" firstAttribute="centerY" secondItem="n4w-EZ-QVX" secondAttribute="centerY" id="zvz-dt-Dcs"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="79" id="zlL-Of-KuV">
+                                        <rect key="frame" x="0.0" y="158" width="375" height="79"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zlL-Of-KuV" id="3dy-9r-ftW">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="78.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JXGradientButton" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aF-N9-GK5">
+                                                    <rect key="frame" x="12" y="33.5" width="86" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pch-sb-MNu" customClass="JXGradientButton" customModule="JXGradientKit" customModuleProvider="target">
+                                                    <rect key="frame" x="295" y="19.5" width="60" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="QFH-xr-mbq"/>
+                                                        <constraint firstAttribute="width" constant="60" id="xNv-H1-o7W"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="3aF-N9-GK5" firstAttribute="leading" secondItem="3dy-9r-ftW" secondAttribute="leading" constant="12" id="9lN-Jl-7cQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="pch-sb-MNu" secondAttribute="trailing" constant="20" id="SJ5-P0-Pkh"/>
+                                                <constraint firstItem="3aF-N9-GK5" firstAttribute="centerY" secondItem="3dy-9r-ftW" secondAttribute="centerY" id="fLe-yH-zw9"/>
+                                                <constraint firstItem="pch-sb-MNu" firstAttribute="centerY" secondItem="3dy-9r-ftW" secondAttribute="centerY" id="kXp-8K-Ac6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="79" id="1Pj-I5-pfR">
+                                        <rect key="frame" x="0.0" y="237" width="375" height="79"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Pj-I5-pfR" id="f4r-y8-YlS">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="78.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JXGradientTextField" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wi2-SG-tMc">
+                                                    <rect key="frame" x="12" y="33.5" width="97" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="默认文本" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s6B-G0-C8b" customClass="JXGradientTextField" customModule="JXGradientKit" customModuleProvider="target">
+                                                    <rect key="frame" x="258" y="19.5" width="97" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="97" id="can-ms-vyx"/>
+                                                        <constraint firstAttribute="height" constant="40" id="lx6-qy-GUW"/>
+                                                    </constraints>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="s6B-G0-C8b" firstAttribute="centerY" secondItem="f4r-y8-YlS" secondAttribute="centerY" id="V9r-r9-hAF"/>
+                                                <constraint firstItem="wi2-SG-tMc" firstAttribute="leading" secondItem="f4r-y8-YlS" secondAttribute="leading" constant="12" id="YzR-uD-vGD"/>
+                                                <constraint firstItem="wi2-SG-tMc" firstAttribute="centerY" secondItem="f4r-y8-YlS" secondAttribute="centerY" id="v9F-RO-s8t"/>
+                                                <constraint firstAttribute="trailing" secondItem="s6B-G0-C8b" secondAttribute="trailing" constant="20" id="xTJ-9a-O0z"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="79" id="7HT-gk-qgT">
+                                        <rect key="frame" x="0.0" y="316" width="375" height="79"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7HT-gk-qgT" id="ltF-wy-kXm">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="78.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JXGradientTextView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgR-js-jMy">
+                                                    <rect key="frame" x="12" y="33.5" width="97" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LFn-xe-1oA" customClass="JXGradientTextView" customModule="JXGradientKit" customModuleProvider="target">
+                                                    <rect key="frame" x="167" y="9.5" width="188" height="60"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="FEU-Ul-Dfm"/>
+                                                        <constraint firstAttribute="width" constant="188" id="dxQ-up-d17"/>
+                                                    </constraints>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="LFn-xe-1oA" secondAttribute="trailing" constant="20" id="J21-mG-kjR"/>
+                                                <constraint firstItem="fgR-js-jMy" firstAttribute="centerY" secondItem="ltF-wy-kXm" secondAttribute="centerY" id="Kj7-Vd-e5S"/>
+                                                <constraint firstItem="LFn-xe-1oA" firstAttribute="centerY" secondItem="ltF-wy-kXm" secondAttribute="centerY" id="QCv-vL-2bL"/>
+                                                <constraint firstItem="fgR-js-jMy" firstAttribute="leading" secondItem="ltF-wy-kXm" secondAttribute="leading" constant="12" id="VWN-BP-a63"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Gd3-z4-e0S" id="uTX-yy-Kbx"/>
+                            <outlet property="delegate" destination="Gd3-z4-e0S" id="CDu-N8-SoP"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="gradientButton" destination="pch-sb-MNu" id="uXA-uD-6ZN"/>
+                        <outlet property="gradientLabel" destination="tSh-zx-nMD" id="Fbb-li-cqS"/>
+                        <outlet property="gradientTextField" destination="s6B-G0-C8b" id="XfM-sq-UCa"/>
+                        <outlet property="gradientTextView" destination="LFn-xe-1oA" id="srJ-RA-Cvz"/>
+                        <outlet property="gradientView" destination="Phm-en-45Q" id="XkV-ZM-QXm"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dwe-WI-Tcc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789.60000000000002" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
