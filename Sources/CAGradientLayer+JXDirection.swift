@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-private let JXGradientLayerDirectionPropertyKey = "JXGradientLayerDirectionPropertyKey"
+private var JXGradientLayerDirectionPropertyKey = "JXGradientLayerDirectionPropertyKey"
 
 public extension CAGradientLayer {
     public enum JXGradientLayerDirection {
@@ -21,7 +21,7 @@ public extension CAGradientLayer {
 
     public var jx_direction: JXGradientLayerDirection {
         set(newDirection) {
-            objc_setAssociatedObject(self, JXGradientLayerDirectionPropertyKey, newDirection, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &JXGradientLayerDirectionPropertyKey, newDirection, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             switch newDirection {
             case .leftToRight:
                 self.startPoint = CGPoint(x: 0, y: 0)
@@ -38,7 +38,7 @@ public extension CAGradientLayer {
             }
         }
         get {
-            let direction = objc_getAssociatedObject(self, JXGradientLayerDirectionPropertyKey)
+            let direction = objc_getAssociatedObject(self, &JXGradientLayerDirectionPropertyKey)
             if direction == nil {
                 self.jx_direction = .topToBottom
                 return .topToBottom
