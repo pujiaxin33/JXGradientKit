@@ -1,10 +1,10 @@
-# JXGradientKit
-常用控件背景渐变色Kit
+# 预览
+![list](https://github.com/pujiaxin33/JXGradientKit/blob/master/JXGradientKit/Images/List.png)
 
 # 原理
 重载UIView的`layerClass`方法，返回`CAGradientLayer`，达到控件背景为渐变色。
 
-# 控件
+# 控件种类
 
 - JXGradientLabel
 - JXGradientView
@@ -12,56 +12,29 @@
 - JXGradientTextField
 - JXGradientTextView
 
-# JXGradientLabel实现示例
-```
-open class JXGradientLabel: UILabel {
-    open class override var layerClass: Swift.AnyClass {
-        get {
-            return CAGradientLayer.classForCoder()
-        }
-    }
+# 使用
 
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
+## XIB可视化编辑
+![XIB](https://github.com/pujiaxin33/JXGradientKit/blob/master/JXGradientKit/Images/XIBGradient.png)
 
-        initializeViews()
-    }
+## 代码使用
 
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-
-        initializeViews()
-    }
-
-    open func initializeViews() {
-        gradientLayer.jx_direction = .leftToRight
-    }
-
-    public var gradientLayer: CAGradientLayer {
-        get {
-            return self.layer as! CAGradientLayer
-        }
-    }
-}
+### 使用`JXGradientViewProtocol`协议约定的便利属性
+```Swift
+gradientView.direction = JXGradientLayerDirection.leftToRight.rawValue
+gradientView.startColor = firstColor
+gradientView.endColor = secondColor
 ```
 
-# JXGradientLayerDirection
-```
-public enum JXGradientLayerDirection {
-        case leftToRight
-        case topToBottom
-        case leftTopToRightBottom
-        case leftBottomToRightTop
-    }
-```
-
-- 使用
-```
-gradientLabel.gradientLayer.jx_direction = .leftToRight
-gradientLabel.gradientLayer.colors = [firstColor, secondColor]
+### 直接配置`CAGradientLayer`
+```Swift
+gradientView.gradientLayer.jx_direction = .leftToRight
+gradientView.gradientLayer.colors = [firstColor, secondColor]
 ```
 
 # 安装
+
+## CocoaPods
 ```ruby
 use_frameworks!
 target '<Your Target Name>' do
