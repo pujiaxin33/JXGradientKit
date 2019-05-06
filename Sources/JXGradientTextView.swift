@@ -8,32 +8,59 @@
 
 import UIKit
 
-open class JXGradientTextView: UITextView {
+@IBDesignable
+open class JXGradientTextView: UITextView, JXGradientViewProtocol {
     open class override var layerClass: Swift.AnyClass {
         get {
             return CAGradientLayer.classForCoder()
         }
     }
+    @IBInspectable
+    public var startColor: UIColor? {
+        didSet {
+            refreshGradientLayer()
+        }
+    }
+    @IBInspectable
+    public var middleColor: UIColor? {
+        didSet {
+            refreshGradientLayer()
+        }
+    }
+    @IBInspectable
+    public var endColor: UIColor? {
+        didSet {
+            refreshGradientLayer()
+        }
+    }
+    @IBInspectable
+    public var direction: Int = 0 {
+        didSet {
+            refreshGradientLayer()
+        }
+    }
+    @IBInspectable
+    public var angle: CGFloat = 0 {
+        didSet {
+            refreshGradientLayer()
+        }
+    }
+    @IBInspectable
+    public var locations: String? {
+        didSet {
+            refreshGradientLayer()
+        }
+    }
 
-    public override init(frame: CGRect, textContainer: NSTextContainer?) {
+    public override init(frame: CGRect, textContainer: NSTextContainer?){
         super.init(frame: frame, textContainer: textContainer)
 
-        initializeViews()
+        refreshGradientLayer()
     }
 
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
 
-        initializeViews()
-    }
-
-    open func initializeViews() {
-        gradientLayer.jx_direction = .leftToRight
-    }
-
-    public var gradientLayer: CAGradientLayer {
-        get {
-            return self.layer as! CAGradientLayer
-        }
+        refreshGradientLayer()
     }
 }

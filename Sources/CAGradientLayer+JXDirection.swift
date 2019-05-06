@@ -11,14 +11,15 @@ import UIKit
 
 private var JXGradientLayerDirectionPropertyKey = "JXGradientLayerDirectionPropertyKey"
 
-public extension CAGradientLayer {
-    public enum JXGradientLayerDirection {
-        case leftToRight
-        case topToBottom
-        case leftTopToRightBottom
-        case leftBottomToRightTop
-    }
+public enum JXGradientLayerDirection: Int {
+    case leftToRight
+    case topToBottom
+    case leftTopToRightBottom
+    case leftBottomToRightTop
+    case custom
+}
 
+public extension CAGradientLayer {
     public var jx_direction: JXGradientLayerDirection {
         set(newDirection) {
             objc_setAssociatedObject(self, &JXGradientLayerDirectionPropertyKey, newDirection, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
@@ -35,15 +36,17 @@ public extension CAGradientLayer {
             case .leftBottomToRightTop:
                 self.startPoint = CGPoint(x: 0, y: 1)
                 self.endPoint = CGPoint(x: 1, y: 0)
+            default:
+                break
             }
         }
         get {
             let direction = objc_getAssociatedObject(self, &JXGradientLayerDirectionPropertyKey)
             if direction == nil {
-                self.jx_direction = .topToBottom
-                return .topToBottom
+                self.jx_direction = .leftToRight
+                return .leftToRight
             }
-            return direction as! CAGradientLayer.JXGradientLayerDirection
+            return direction as! JXGradientLayerDirection
         }
     }
 }

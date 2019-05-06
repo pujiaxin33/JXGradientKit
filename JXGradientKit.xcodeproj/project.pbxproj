@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		195678EA2280269B005A1C79 /* XIBGradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 195678E92280269B005A1C79 /* XIBGradient.png */; };
+		195678EC22802AA5005A1C79 /* JXGradientViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195678EB22802AA5005A1C79 /* JXGradientViewProtocol.swift */; };
+		195678EE228033CA005A1C79 /* List.png in Resources */ = {isa = PBXBuildFile; fileRef = 195678ED228033CA005A1C79 /* List.png */; };
 		19E326AA21928F72003E9C7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E326A921928F72003E9C7F /* AppDelegate.swift */; };
 		19E326AC21928F72003E9C7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E326AB21928F72003E9C7F /* ViewController.swift */; };
 		19E326AF21928F72003E9C7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E326AD21928F72003E9C7F /* Main.storyboard */; };
@@ -21,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		195678E92280269B005A1C79 /* XIBGradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XIBGradient.png; sourceTree = "<group>"; };
+		195678EB22802AA5005A1C79 /* JXGradientViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JXGradientViewProtocol.swift; sourceTree = "<group>"; };
+		195678ED228033CA005A1C79 /* List.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = List.png; sourceTree = "<group>"; };
 		19E326A621928F72003E9C7F /* JXGradientKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JXGradientKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19E326A921928F72003E9C7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19E326AB21928F72003E9C7F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +53,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		195678E82280268C005A1C79 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				195678ED228033CA005A1C79 /* List.png */,
+				195678E92280269B005A1C79 /* XIBGradient.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		19E3269D21928F72003E9C7F = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +81,7 @@
 		19E326A821928F72003E9C7F /* JXGradientKit */ = {
 			isa = PBXGroup;
 			children = (
+				195678E82280268C005A1C79 /* Images */,
 				19E326BC21928F8F003E9C7F /* Sources */,
 				19E326A921928F72003E9C7F /* AppDelegate.swift */,
 				19E326AB21928F72003E9C7F /* ViewController.swift */,
@@ -86,6 +102,7 @@
 				19E326C3219293DA003E9C7F /* JXGradientTextField.swift */,
 				19E326C5219294A4003E9C7F /* JXGradientTextView.swift */,
 				19E326C72192B034003E9C7F /* CAGradientLayer+JXDirection.swift */,
+				195678EB22802AA5005A1C79 /* JXGradientViewProtocol.swift */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -150,7 +167,9 @@
 			files = (
 				19E326B421928F74003E9C7F /* LaunchScreen.storyboard in Resources */,
 				19E326B121928F74003E9C7F /* Assets.xcassets in Resources */,
+				195678EE228033CA005A1C79 /* List.png in Resources */,
 				19E326AF21928F72003E9C7F /* Main.storyboard in Resources */,
+				195678EA2280269B005A1C79 /* XIBGradient.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +182,7 @@
 			files = (
 				19E326AC21928F72003E9C7F /* ViewController.swift in Sources */,
 				19E326C4219293DA003E9C7F /* JXGradientTextField.swift in Sources */,
+				195678EC22802AA5005A1C79 /* JXGradientViewProtocol.swift in Sources */,
 				19E326C02192933F003E9C7F /* JXGradientButton.swift in Sources */,
 				19E326C82192B034003E9C7F /* CAGradientLayer+JXDirection.swift in Sources */,
 				19E326C6219294A4003E9C7F /* JXGradientTextView.swift in Sources */,
