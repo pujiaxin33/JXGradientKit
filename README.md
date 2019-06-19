@@ -4,6 +4,12 @@
 # 原理
 重载UIView的`layerClass`方法，返回`CAGradientLayer`，达到控件背景为渐变色。
 
+# 要求
+
+iOS: 9+
+XCode: 12+
+swift: 5.0+
+
 # 控件种类
 
 - JXGradientLabel
