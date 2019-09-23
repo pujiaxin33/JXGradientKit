@@ -30,7 +30,7 @@ public protocol JXGradientViewProtocol {
 }
 
 public extension JXGradientViewProtocol where Self: UIView {
-    public var gradientLayer: CAGradientLayer {
+    var gradientLayer: CAGradientLayer {
         get {
             return self.layer as! CAGradientLayer
         }
@@ -38,7 +38,7 @@ public extension JXGradientViewProtocol where Self: UIView {
 }
 
 public extension JXGradientViewProtocol {
-    public func refreshGradientLayer() {
+    func refreshGradientLayer() {
         var colors = [CGColor]()
         colors.append((self.startColor ?? .clear).cgColor)
         if middleColor != nil {

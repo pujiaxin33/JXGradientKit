@@ -20,7 +20,7 @@ public enum JXGradientLayerDirection: Int {
 }
 
 public extension CAGradientLayer {
-    public var jx_direction: JXGradientLayerDirection {
+    var jx_direction: JXGradientLayerDirection {
         set(newDirection) {
             objc_setAssociatedObject(self, &JXGradientLayerDirectionPropertyKey, newDirection, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             switch newDirection {
