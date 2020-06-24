@@ -12,11 +12,11 @@ swift: 5.0+
 
 # 控件种类
 
-- JXGradientLabel
-- JXGradientView
-- JXGradientButton
-- JXGradientTextField
-- JXGradientTextView
+- GradientLabel
+- GradientView
+- GradientButton
+- GradientTextField
+- GradientTextView
 
 # 使用
 
@@ -27,14 +27,13 @@ swift: 5.0+
 
 ### 使用`JXGradientViewProtocol`协议约定的便利属性
 ```Swift
-gradientView.direction = JXGradientLayerDirection.leftToRight.rawValue
+gradientView.direction = JXGradientLayerDirection.leftToRight
 gradientView.startColor = firstColor
 gradientView.endColor = secondColor
 ```
 
 ### 直接配置`CAGradientLayer`
 ```Swift
-gradientView.gradientLayer.jx_direction = .leftToRight
 gradientView.gradientLayer.colors = [firstColor, secondColor]
 ```
 

@@ -1,5 +1,5 @@
 //
-//  JXGradientView.swift
+//  JXGradientTextView.swift
 //  JXGradientKit
 //
 //  Created by jiaxin on 2018/11/7.
@@ -9,58 +9,58 @@
 import UIKit
 
 @IBDesignable
-open class JXGradientView: UIView, JXGradientViewProtocol {
+open class GradientTextView: UITextView, GradientAvaliable {
     open class override var layerClass: Swift.AnyClass {
         get {
-            return CAGradientLayer.classForCoder()
+            return CAGradientLayer.self
         }
     }
     @IBInspectable
     public var startColor: UIColor? {
         didSet {
-            refreshGradientLayer()
+            refreshGradient()
         }
     }
     @IBInspectable
     public var middleColor: UIColor? {
         didSet {
-            refreshGradientLayer()
+            refreshGradient()
         }
     }
     @IBInspectable
     public var endColor: UIColor? {
         didSet {
-            refreshGradientLayer()
+            refreshGradient()
         }
     }
     @IBInspectable
-    public var direction: Int = 0 {
+    public var direction: GradientLayerDirection = .custom {
         didSet {
-            refreshGradientLayer()
+            refreshGradient()
         }
     }
     @IBInspectable
     public var angle: CGFloat = 0 {
         didSet {
-            refreshGradientLayer()
+            refreshGradient()
         }
     }
     @IBInspectable
     public var locations: String? {
         didSet {
-            refreshGradientLayer()
+            refreshGradient()
         }
     }
 
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
+    public override init(frame: CGRect, textContainer: NSTextContainer?){
+        super.init(frame: frame, textContainer: textContainer)
 
-        refreshGradientLayer()
+        refreshGradient()
     }
 
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
 
-        refreshGradientLayer()
+        refreshGradient()
     }
 }

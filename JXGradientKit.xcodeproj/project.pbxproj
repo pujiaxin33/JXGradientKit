@@ -8,24 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		195678EA2280269B005A1C79 /* XIBGradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 195678E92280269B005A1C79 /* XIBGradient.png */; };
-		195678EC22802AA5005A1C79 /* JXGradientViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195678EB22802AA5005A1C79 /* JXGradientViewProtocol.swift */; };
+		195678EC22802AA5005A1C79 /* GradientAvaliable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195678EB22802AA5005A1C79 /* GradientAvaliable.swift */; };
 		195678EE228033CA005A1C79 /* List.png in Resources */ = {isa = PBXBuildFile; fileRef = 195678ED228033CA005A1C79 /* List.png */; };
 		19E326AA21928F72003E9C7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E326A921928F72003E9C7F /* AppDelegate.swift */; };
 		19E326AC21928F72003E9C7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E326AB21928F72003E9C7F /* ViewController.swift */; };
 		19E326AF21928F72003E9C7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E326AD21928F72003E9C7F /* Main.storyboard */; };
 		19E326B121928F74003E9C7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19E326B021928F74003E9C7F /* Assets.xcassets */; };
 		19E326B421928F74003E9C7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E326B221928F74003E9C7F /* LaunchScreen.storyboard */; };
-		19E326BE21928FA1003E9C7F /* JXGradientLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E326BD21928FA1003E9C7F /* JXGradientLabel.swift */; };
-		19E326C02192933F003E9C7F /* JXGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E326BF2192933F003E9C7F /* JXGradientButton.swift */; };
-		19E326C22192939D003E9C7F /* JXGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E326C12192939D003E9C7F /* JXGradientView.swift */; };
-		19E326C4219293DA003E9C7F /* JXGradientTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E326C3219293DA003E9C7F /* JXGradientTextField.swift */; };
-		19E326C6219294A4003E9C7F /* JXGradientTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E326C5219294A4003E9C7F /* JXGradientTextView.swift */; };
-		19E326C82192B034003E9C7F /* CAGradientLayer+JXDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E326C72192B034003E9C7F /* CAGradientLayer+JXDirection.swift */; };
+		19E326BE21928FA1003E9C7F /* GradientLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E326BD21928FA1003E9C7F /* GradientLabel.swift */; };
+		19E326C02192933F003E9C7F /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E326BF2192933F003E9C7F /* GradientButton.swift */; };
+		19E326C22192939D003E9C7F /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E326C12192939D003E9C7F /* GradientView.swift */; };
+		19E326C4219293DA003E9C7F /* GradientTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E326C3219293DA003E9C7F /* GradientTextField.swift */; };
+		19E326C6219294A4003E9C7F /* GradientTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E326C5219294A4003E9C7F /* GradientTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		195678E92280269B005A1C79 /* XIBGradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XIBGradient.png; sourceTree = "<group>"; };
-		195678EB22802AA5005A1C79 /* JXGradientViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JXGradientViewProtocol.swift; sourceTree = "<group>"; };
+		195678EB22802AA5005A1C79 /* GradientAvaliable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientAvaliable.swift; sourceTree = "<group>"; };
 		195678ED228033CA005A1C79 /* List.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = List.png; sourceTree = "<group>"; };
 		19E326A621928F72003E9C7F /* JXGradientKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JXGradientKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19E326A921928F72003E9C7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,12 +33,11 @@
 		19E326B021928F74003E9C7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19E326B321928F74003E9C7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19E326B521928F74003E9C7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		19E326BD21928FA1003E9C7F /* JXGradientLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JXGradientLabel.swift; sourceTree = "<group>"; };
-		19E326BF2192933F003E9C7F /* JXGradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JXGradientButton.swift; sourceTree = "<group>"; };
-		19E326C12192939D003E9C7F /* JXGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JXGradientView.swift; sourceTree = "<group>"; };
-		19E326C3219293DA003E9C7F /* JXGradientTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JXGradientTextField.swift; sourceTree = "<group>"; };
-		19E326C5219294A4003E9C7F /* JXGradientTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JXGradientTextView.swift; sourceTree = "<group>"; };
-		19E326C72192B034003E9C7F /* CAGradientLayer+JXDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+JXDirection.swift"; sourceTree = "<group>"; };
+		19E326BD21928FA1003E9C7F /* GradientLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLabel.swift; sourceTree = "<group>"; };
+		19E326BF2192933F003E9C7F /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
+		19E326C12192939D003E9C7F /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		19E326C3219293DA003E9C7F /* GradientTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientTextField.swift; sourceTree = "<group>"; };
+		19E326C5219294A4003E9C7F /* GradientTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,13 +94,12 @@
 		19E326BC21928F8F003E9C7F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				19E326BD21928FA1003E9C7F /* JXGradientLabel.swift */,
-				19E326C12192939D003E9C7F /* JXGradientView.swift */,
-				19E326BF2192933F003E9C7F /* JXGradientButton.swift */,
-				19E326C3219293DA003E9C7F /* JXGradientTextField.swift */,
-				19E326C5219294A4003E9C7F /* JXGradientTextView.swift */,
-				19E326C72192B034003E9C7F /* CAGradientLayer+JXDirection.swift */,
-				195678EB22802AA5005A1C79 /* JXGradientViewProtocol.swift */,
+				19E326BD21928FA1003E9C7F /* GradientLabel.swift */,
+				19E326C12192939D003E9C7F /* GradientView.swift */,
+				19E326BF2192933F003E9C7F /* GradientButton.swift */,
+				19E326C3219293DA003E9C7F /* GradientTextField.swift */,
+				19E326C5219294A4003E9C7F /* GradientTextView.swift */,
+				195678EB22802AA5005A1C79 /* GradientAvaliable.swift */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -181,13 +178,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				19E326AC21928F72003E9C7F /* ViewController.swift in Sources */,
-				19E326C4219293DA003E9C7F /* JXGradientTextField.swift in Sources */,
-				195678EC22802AA5005A1C79 /* JXGradientViewProtocol.swift in Sources */,
-				19E326C02192933F003E9C7F /* JXGradientButton.swift in Sources */,
-				19E326C82192B034003E9C7F /* CAGradientLayer+JXDirection.swift in Sources */,
-				19E326C6219294A4003E9C7F /* JXGradientTextView.swift in Sources */,
-				19E326BE21928FA1003E9C7F /* JXGradientLabel.swift in Sources */,
-				19E326C22192939D003E9C7F /* JXGradientView.swift in Sources */,
+				19E326C4219293DA003E9C7F /* GradientTextField.swift in Sources */,
+				195678EC22802AA5005A1C79 /* GradientAvaliable.swift in Sources */,
+				19E326C02192933F003E9C7F /* GradientButton.swift in Sources */,
+				19E326C6219294A4003E9C7F /* GradientTextView.swift in Sources */,
+				19E326BE21928FA1003E9C7F /* GradientLabel.swift in Sources */,
+				19E326C22192939D003E9C7F /* GradientView.swift in Sources */,
 				19E326AA21928F72003E9C7F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UITableViewController {
-    @IBOutlet weak var gradientView: JXGradientView!
+    @IBOutlet weak var gradientView: GradientView!
 
     override func viewDidLoad() {
         super.viewDidLoad()

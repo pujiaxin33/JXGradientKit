@@ -9,15 +9,21 @@
 import Foundation
 import UIKit
 
-/// JXGradientViewProtocol提供的startColor、direction、locations等便利属性，主要便于XIB可视化编辑。如果觉得不方便，你可以不使用它们，直接通过JXGradientViewProtocol.gradientLayer设置渐变色属性。
-public protocol JXGradientViewProtocol {
+@objc public enum GradientLayerDirection: Int {
+    case leftToRight
+    case topToBottom
+    case leftTopToRightBottom
+    case leftBottomToRightTop
+    case custom
+}
+
+/// 通过startColor、direction、locations等属性，可用于XIB可视化编辑。也可以访问gradientLayer直接设置渐变色属性。
+public protocol GradientAvaliable {
     var gradientLayer: CAGradientLayer { get }
     var startColor: UIColor? { set get }
     var middleColor: UIColor? { set get }
     var endColor: UIColor? { set get }
-    /// 因为XIB无法支持枚举值类型，所以通过Int曲线救国。
-    /// 通过代码`gradientLayer.jx_direction = JXGradientLayerDirection(rawValue: direction)`更新jx_direction
-    var direction: Int { set get }
+    var direction: GradientLayerDirection { set get }
     /// 渐变色的角度
     /// 只有在`direction == .custom`时有效
     var angle: CGFloat { set get }
@@ -26,10 +32,10 @@ public protocol JXGradientViewProtocol {
     /// 如果你通过代码配置`JXGradientView`，可以直接通过gradientLayer.locations配置，避免使用字符串出错。
     var locations: String? { set get }
 
-    func refreshGradientLayer()
+    func refreshGradient()
 }
 
-public extension JXGradientViewProtocol where Self: UIView {
+public extension GradientAvaliable where Self: UIView {
     var gradientLayer: CAGradientLayer {
         get {
             return self.layer as! CAGradientLayer
@@ -37,8 +43,8 @@ public extension JXGradientViewProtocol where Self: UIView {
     }
 }
 
-public extension JXGradientViewProtocol {
-    func refreshGradientLayer() {
+public extension GradientAvaliable {
+    func refreshGradient() {
         var colors = [CGColor]()
         colors.append((self.startColor ?? .clear).cgColor)
         if middleColor != nil {
@@ -47,11 +53,23 @@ public extension JXGradientViewProtocol {
         colors.append((self.endColor ?? .clear).cgColor)
         gradientLayer.colors = colors
 
-        gradientLayer.jx_direction = JXGradientLayerDirection(rawValue: direction) ?? .leftToRight
-        if direction == JXGradientLayerDirection.custom.rawValue {
-            let (startPoint, endPoint) = gradientPointsForAngle(angle)
-            gradientLayer.startPoint = startPoint
-            gradientLayer.endPoint = endPoint
+        switch direction {
+            case .leftToRight:
+                gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+                gradientLayer.endPoint = CGPoint(x: 1, y: 0)
+            case .topToBottom:
+                gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
+                gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)
+            case .leftTopToRightBottom:
+                gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+                gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+            case .leftBottomToRightTop:
+                gradientLayer.startPoint = CGPoint(x: 0, y: 1)
+                gradientLayer.endPoint = CGPoint(x: 1, y: 0)
+            case .custom:
+                let (startPoint, endPoint) = gradientPointsForAngle(angle)
+                gradientLayer.startPoint = startPoint
+                gradientLayer.endPoint = endPoint
         }
 
         if let locations = self.locations {
