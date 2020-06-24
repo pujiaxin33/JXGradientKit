@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-open class GradientLabel: UILabel, JXGradientViewAvaliable {
+open class GradientLabel: UILabel, GradientAvaliable {
     open class override var layerClass: Swift.AnyClass {
         get {
             return CAGradientLayer.self
@@ -34,7 +34,7 @@ open class GradientLabel: UILabel, JXGradientViewAvaliable {
         }
     }
     @IBInspectable
-    public var direction: JXGradientLayerDirection = .custom {
+    public var direction: GradientDirection = .custom {
         didSet {
             refreshGradient()
         }

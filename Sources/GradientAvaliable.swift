@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-@objc public enum GradientLayerDirection: Int {
+@objc public enum GradientDirection: Int {
     case leftToRight
     case topToBottom
     case leftTopToRightBottom
@@ -23,7 +23,7 @@ public protocol GradientAvaliable {
     var startColor: UIColor? { set get }
     var middleColor: UIColor? { set get }
     var endColor: UIColor? { set get }
-    var direction: GradientLayerDirection { set get }
+    var direction: GradientDirection { set get }
     /// 渐变色的角度
     /// 只有在`direction == .custom`时有效
     var angle: CGFloat { set get }
