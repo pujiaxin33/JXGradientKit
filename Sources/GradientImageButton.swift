@@ -42,7 +42,7 @@ open class GradientImageButton: UIButton, GradientAvaliable {
         }
     }
     @IBInspectable
-    public var direction: GradientDirection = .custom {
+    public var direction: GradientDirection = .leftToRight {
         didSet {
             refreshGradient()
             updateBackroundImageIfNeeded()

@@ -39,7 +39,7 @@ open class GradientView: UIView, GradientAvaliable {
         }
     }
     @IBInspectable
-    public var direction: GradientDirection = .custom {
+    public var direction: GradientDirection = .leftToRight {
         didSet {
             refreshGradient()
         }
