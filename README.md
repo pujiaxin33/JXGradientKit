@@ -15,6 +15,7 @@ swift: 5.0+
 - GradientLabel
 - GradientView
 - GradientButton
+- GradientImageButton
 - GradientTextField
 - GradientTextView
 

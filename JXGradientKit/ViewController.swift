@@ -20,7 +20,7 @@ class ViewController: UITableViewController {
         gradientView.gradientLayer.colors = [firstColor.cgColor, secondColor.cgColor]
 
         //通过便利属性配置
-//        gradientView.direction = JXGradientLayerDirection.leftToRight.rawValue
+//        gradientView.direction = GradientDirection.leftToRight
 //        gradientView.startColor = firstColor
 //        gradientView.endColor = secondColor
     }

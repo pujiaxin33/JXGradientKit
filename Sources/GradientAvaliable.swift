@@ -127,3 +127,16 @@ public extension GradientAvaliable {
         return CGPoint(x: -point.x, y: -point.y)
     }
 }
+
+extension UIImage {
+    class func gradientImageWithLayer(_ layer: CAGradientLayer) -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(layer.frame.size, false, UIScreen.main.scale)
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return nil
+        }
+        layer.render(in: context)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+}

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1901891024A42CAD001307D2 /* GradientImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1901890F24A42CAD001307D2 /* GradientImageButton.swift */; };
 		195678EA2280269B005A1C79 /* XIBGradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 195678E92280269B005A1C79 /* XIBGradient.png */; };
 		195678EC22802AA5005A1C79 /* GradientAvaliable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195678EB22802AA5005A1C79 /* GradientAvaliable.swift */; };
 		195678EE228033CA005A1C79 /* List.png in Resources */ = {isa = PBXBuildFile; fileRef = 195678ED228033CA005A1C79 /* List.png */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1901890F24A42CAD001307D2 /* GradientImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientImageButton.swift; sourceTree = "<group>"; };
 		195678E92280269B005A1C79 /* XIBGradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XIBGradient.png; sourceTree = "<group>"; };
 		195678EB22802AA5005A1C79 /* GradientAvaliable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientAvaliable.swift; sourceTree = "<group>"; };
 		195678ED228033CA005A1C79 /* List.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = List.png; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				19E326BD21928FA1003E9C7F /* GradientLabel.swift */,
 				19E326C12192939D003E9C7F /* GradientView.swift */,
 				19E326BF2192933F003E9C7F /* GradientButton.swift */,
+				1901890F24A42CAD001307D2 /* GradientImageButton.swift */,
 				19E326C3219293DA003E9C7F /* GradientTextField.swift */,
 				19E326C5219294A4003E9C7F /* GradientTextView.swift */,
 				195678EB22802AA5005A1C79 /* GradientAvaliable.swift */,
@@ -177,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1901891024A42CAD001307D2 /* GradientImageButton.swift in Sources */,
 				19E326AC21928F72003E9C7F /* ViewController.swift in Sources */,
 				19E326C4219293DA003E9C7F /* GradientTextField.swift in Sources */,
 				195678EC22802AA5005A1C79 /* GradientAvaliable.swift in Sources */,
