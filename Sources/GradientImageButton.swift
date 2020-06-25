@@ -8,49 +8,58 @@
 
 import UIKit
 
+/// 配置gradientLayer的属性无法生效，使用GradientImageButton的相关属性才行。
 @IBDesignable
 open class GradientImageButton: UIButton, GradientAvaliable {
-    public var gradientLayer: CAGradientLayer = CAGradientLayer()
+    public private(set) var gradientLayer: CAGradientLayer = CAGradientLayer()
+    var isLayouted = false
 
     public var colors: [UIColor]? {
            didSet {
-               refreshGradient()
+                refreshGradient()
+                updateBackroundImageIfNeeded()
            }
        }
     @IBInspectable
     public var startColor: UIColor? {
         didSet {
             refreshGradient()
+            updateBackroundImageIfNeeded()
         }
     }
     @IBInspectable
     public var middleColor: UIColor? {
         didSet {
             refreshGradient()
+            updateBackroundImageIfNeeded()
         }
     }
     @IBInspectable
     public var endColor: UIColor? {
         didSet {
             refreshGradient()
+            updateBackroundImageIfNeeded()
         }
     }
     @IBInspectable
     public var direction: GradientDirection = .custom {
         didSet {
             refreshGradient()
+            updateBackroundImageIfNeeded()
         }
     }
     @IBInspectable
     public var angle: CGFloat = 0 {
         didSet {
             refreshGradient()
+            updateBackroundImageIfNeeded()
         }
     }
     @IBInspectable
     public var locations: String? {
         didSet {
             refreshGradient()
+            updateBackroundImageIfNeeded()
         }
     }
 
@@ -70,7 +79,15 @@ open class GradientImageButton: UIButton, GradientAvaliable {
         super.layoutSubviews()
 
         if gradientLayer.frame != bounds {
+            isLayouted = true
             gradientLayer.frame = bounds
+            let image = UIImage.gradientImageWithLayer(gradientLayer)
+            setBackgroundImage(image, for: .normal)
+        }
+    }
+
+    func updateBackroundImageIfNeeded() {
+        if isLayouted {
             let image = UIImage.gradientImageWithLayer(gradientLayer)
             setBackgroundImage(image, for: .normal)
         }

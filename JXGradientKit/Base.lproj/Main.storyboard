@@ -323,6 +323,7 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="gradientImageButton" destination="UZi-vN-fE8" id="JE5-zD-dyV"/>
                         <outlet property="gradientView" destination="Phm-en-45Q" id="XkV-ZM-QXm"/>
                     </connections>
                 </tableViewController>

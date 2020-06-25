@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "JXGradientKit"
-  s.version = "0.0.9"
+  s.version = "0.0.10"
   s.summary      = "常用控件背景渐变色Kit"
   s.homepage     = "https://github.com/pujiaxin33/JXGradientKit"
   s.license      = "MIT"
