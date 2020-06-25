@@ -12,6 +12,11 @@ import UIKit
 open class GradientImageButton: UIButton, GradientAvaliable {
     public var gradientLayer: CAGradientLayer = CAGradientLayer()
 
+    public var colors: [UIColor]? {
+           didSet {
+               refreshGradient()
+           }
+       }
     @IBInspectable
     public var startColor: UIColor? {
         didSet {

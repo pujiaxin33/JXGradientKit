@@ -23,6 +23,7 @@ public protocol GradientAvaliable {
     var startColor: UIColor? { set get }
     var middleColor: UIColor? { set get }
     var endColor: UIColor? { set get }
+    var colors: [UIColor]? { set get }
     var direction: GradientDirection { set get }
     /// 渐变色的角度
     /// 只有在`direction == .custom`时有效
@@ -45,13 +46,17 @@ public extension GradientAvaliable where Self: UIView {
 
 public extension GradientAvaliable {
     func refreshGradient() {
-        var colors = [CGColor]()
-        colors.append((self.startColor ?? .clear).cgColor)
-        if middleColor != nil {
-            colors.append(middleColor!.cgColor)
+        var colorsArray = [CGColor]()
+        if colors?.isEmpty == false {
+            colorsArray = colors!.map { $0.cgColor }
+        }else {
+            colorsArray.append((self.startColor ?? .clear).cgColor)
+            if middleColor != nil {
+                colorsArray.append(middleColor!.cgColor)
+            }
+            colorsArray.append((self.endColor ?? .clear).cgColor)
         }
-        colors.append((self.endColor ?? .clear).cgColor)
-        gradientLayer.colors = colors
+        gradientLayer.colors = colorsArray
 
         switch direction {
             case .leftToRight:

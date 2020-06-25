@@ -15,6 +15,11 @@ open class GradientTextField: UITextField, GradientAvaliable {
             return CAGradientLayer.self
         }
     }
+    public var colors: [UIColor]? {
+        didSet {
+            refreshGradient()
+        }
+    }
     @IBInspectable
     public var startColor: UIColor? {
         didSet {
