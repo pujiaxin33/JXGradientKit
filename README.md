@@ -26,7 +26,7 @@ swift: 5.0+
 
 ## 代码使用
 
-### 使用`JXGradientViewProtocol`协议约定的便利属性
+### 使用`GradientAvaliable`协议约定的属性
 ```Swift
 gradientView.direction = JXGradientLayerDirection.leftToRight
 gradientView.startColor = firstColor
